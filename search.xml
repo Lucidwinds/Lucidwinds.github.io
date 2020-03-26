@@ -5,12 +5,18 @@
     
     <entry>
       <title>Hello Github</title>
-      <link href="/2020/03/11/hello-github/"/>
-      <url>/2020/03/11/hello-github/</url>
+      <link href="/2020/03/25/hello-github/"/>
+      <url>/2020/03/25/hello-github/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<p>GitHub是通过Git进行版本控制的软件源代码托管服务平台，由GitHub公司（曾称Logical Awesome）的开发者Chris Wanstrath、PJ Hyett和Tom Preston-Werner使用Ruby on Rails编写而成。<br>#<a href="https://github.com/" target="_blank" rel="noopener">Github</a>发展<br>GitHub平台于2007年10月1日开始开发。<br>2008年2月以beta版本开始上线，4月份正式上线.<br>2019年1月7日，GitHub宣布免费用户也可以创建私有仓库，私有仓库数量不限但每个仓库最多指定三个合作者。<br>#网站统计<br>GitHub于2008年2月运行。<br>在2009年2月24日通过雅虎进行的一次采访中，GitHub队伍成员们宣布在GitHub运行的第一年，有共计46,000个公共版本库，它们中有17,000个是于最近一个月内创建的。当时，大概有6,200个版本库被派生（fork）至少一次，有4,600被合并。<br>在另一个在2009年6月27日通过雅虎的采访中，Tom Preston-Werner宣布版本库数量已经提升到了90,000唯一性公共版本库，有12,000个版本库被派生（fork）至少一次，总共有135,000个版本库。<br>在2010年6月，GitHub宣布它现在已经可提供1百万项目，它们中的60%是完整的版本库，但仍然有40%是“gist”或代码片段。2011年4月，GitHub宣称存放的代码库数量已达到2百万个。2013年4月，GitHub用户数达到350万，代码库数量达到6百万个。</p>]]></content>
       
       
+      
+        <tags>
+            
+            <tag> Github </tag>
+            
+        </tags>
       
     </entry>
     
