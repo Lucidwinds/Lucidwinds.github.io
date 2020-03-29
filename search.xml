@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>python随机分配实例</title>
+      <link href="/2020/03/28/python-sui-ji-fen-pei-shi-li/"/>
+      <url>/2020/03/28/python-sui-ji-fen-pei-shi-li/</url>
+      
+        <content type="html"><![CDATA[<p>python是一门简便的编程语言，可以用简短的代码实现其他编程语言冗长的过程，通过以下随机分配老师进办公室的实力可以看出来。  </p><p>‘’’python<br>#encoding=utf-8</p><p>import random</p><p>#定义一个列表，表示三个空办公室<br>offices = [[],[],[]]</p><p>#定义一个列表，用来存储八位老师的信息<br>teachers = [‘张三’,’李四’,’王五’,’赵六’,’韩七’,’刘八’,’秦一’,’田九’,’孙二’]</p><p>#通过循环的方式把8位老师随机分配到3个办公室，然后把老师添加进去<br>for name in teachers:<br>        index = random.randint(0,2)<br>        offices[index].append(name)</p><p>#输出每个办公室里面老师的信息</p><p>i = 1</p><p>for room in offices:<br>        print(‘办公室%d—–’%i)<br>        for teacherName in room:<br>                print(teacherName)<br>        i += 1<br>‘’’  </p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> python实例 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello Github</title>
       <link href="/2020/03/25/hello-github/"/>
       <url>/2020/03/25/hello-github/</url>
