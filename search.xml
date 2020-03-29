@@ -4,11 +4,24 @@
   
     
     <entry>
+      <title>python学习</title>
+      <link href="/2020/03/29/python-xue-xi/"/>
+      <url>/2020/03/29/python-xue-xi/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>python随机分配实例</title>
       <link href="/2020/03/28/python-sui-ji-fen-pei-shi-li/"/>
       <url>/2020/03/28/python-sui-ji-fen-pei-shi-li/</url>
       
-        <content type="html"><![CDATA[<p>python是一门简便的编程语言，可以用简短的代码实现其他编程语言冗长的过程，通过以下随机分配老师进办公室的实力可以看出来。  </p><p>‘’’python<br>#encoding=utf-8</p><p>import random</p><p>#定义一个列表，表示三个空办公室<br>offices = [[],[],[]]</p><p>#定义一个列表，用来存储八位老师的信息<br>teachers = [‘张三’,’李四’,’王五’,’赵六’,’韩七’,’刘八’,’秦一’,’田九’,’孙二’]</p><p>#通过循环的方式把8位老师随机分配到3个办公室，然后把老师添加进去<br>for name in teachers:<br>        index = random.randint(0,2)<br>        offices[index].append(name)</p><p>#输出每个办公室里面老师的信息</p><p>i = 1</p><p>for room in offices:<br>        print(‘办公室%d—–’%i)<br>        for teacherName in room:<br>                print(teacherName)<br>        i += 1<br>‘’’  </p>]]></content>
+        <content type="html"><![CDATA[<p>python是一门简便的编程语言，可以用简短的代码实现其他编程语言冗长的过程。  </p><h3 id="通过以下随机分配老师进办公室的实例可以看出来。"><a href="#通过以下随机分配老师进办公室的实例可以看出来。" class="headerlink" title="通过以下随机分配老师进办公室的实例可以看出来。"></a>通过以下随机分配老师进办公室的实例可以看出来。</h3><pre><code>#encoding=utf-8import random#定义一个列表，表示三个空办公室offices = [[],[],[]]#定义一个列表，用来存储八位老师的信息teachers = [&#39;张三&#39;,&#39;李四&#39;,&#39;王五&#39;,&#39;赵六&#39;,&#39;韩七&#39;,&#39;刘八&#39;,&#39;秦一&#39;,&#39;田九&#39;,&#39;孙二&#39;]#通过循环的方式把8位老师随机分配到3个办公室，然后把老师添加进去for name in teachers:    index = random.randint(0,2)    offices[index].append(name)#输出每个办公室里面老师的信息i = 1for room in offices:    print(&#39;办公室%d-----&#39;%i)    for teacherName in room:            print(teacherName)    i += 1</code></pre><h3 id="运行了两次，实现的效果如下"><a href="#运行了两次，实现的效果如下" class="headerlink" title="运行了两次，实现的效果如下"></a>运行了两次，实现的效果如下</h3><pre><code>lucid@lucid:~$ python 000.py办公室1-----李四赵六田九办公室2-----张三刘八孙二办公室3-----王五韩七秦一lucid@lucid:~$ python 000.py办公室1-----张三赵六孙二办公室2-----李四王五韩七刘八办公室3-----秦一田九</code></pre><p>可见，实现了随机安排的效果。  </p><h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a><strong>总结</strong></h4><p>编程思想还是和日常的思维方式有区别的，以正常的思维刚开始，没想到直接取出老师安排进随机的办公室里面，我想着就按照日常的想法随机安排办公室随机安排教师，这么想了之后我发现实施下来很难，而以这种方式就可以很方便的实现简单的随机，以后再加限制条件就相对简单了。所以，编程思想还是要好好培养的。</p>]]></content>
       
       
       
