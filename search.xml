@@ -4,13 +4,19 @@
   
     
     <entry>
-      <title>python学习</title>
+      <title>python函数参数</title>
       <link href="/2020/03/29/python-xue-xi/"/>
       <url>/2020/03/29/python-xue-xi/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h1 id="python函数可定义参数"><a href="#python函数可定义参数" class="headerlink" title="python函数可定义参数"></a>python函数可定义参数</h1><p>参数定义方式如下：</p><pre><code>#定义一个函数def add2num():    sun = 11 + 22    print(&quot;sum=%d&quot;%sum)#如果在定义函数的时候，在小括号中如果有变量，那么也就意味着这个函数在调用的时候需要传递数据def add2num_2(num1,num2):   #在定义函数时，小括号中的变量就是形参（只是一种形式，实际的作用是用来接收传递过来的数据）    #sum = num1 + num2    #print(&quot;%d+%d=%d&quot;%(num1,num2,sum))    print(&quot;%d+%d=%d&quot;(num1,num2,num1+num2))   #如果后面用不到可直接把计算公式写出来#如果调用的这个函数在定义的时候有多个变量（在小括号内）那么就必须要传递数据add2num_2(100,200)   #这里面的100，200就是实参（实际传递的参数，实际传递的数据）#如果定义的函数需要两个参数，而调用的时候没有给出数据，或者给出太多数据都会造成程序异常</code></pre><h5 id="通过这个例子可以简单地了解函数参数以及形参和实参的含义"><a href="#通过这个例子可以简单地了解函数参数以及形参和实参的含义" class="headerlink" title="通过这个例子可以简单地了解函数参数以及形参和实参的含义"></a>通过这个例子可以简单地了解函数参数以及形参和实参的含义</h5><p>除此之外，可以把函数运用的更加灵活一点  </p><pre><code>#定义一个函数def add2num(a,b):   #里面的形参虽然填a,b也可以，但是为了可读性，尽量填下面用到的变量名sum1,sum2    sum = a + b    print(&quot;sum=%d&quot;%sum)#1.从用户获取两个数据num1 = int(input(&quot;请输入第一个数字：&quot;))num2 = int(input(&quot;请输入第二个数字：&quot;))   #因为获取的数据是字符串，无法直接完成数学运算，可直接在这里定义int类型#2.调用函数，并且传递过去，就能完成函数的运行add2num(num1,num2)</code></pre><p>在定义形参和实参的时候，一般是按照先后顺序一一对应的，但是可以通过括号内加“=”来完成乱序赋值  </p><pre><code>def add2num(a,b):    sum = a+b    print(&quot;%d+%d=%d&quot;%(a,b,sum))add2num(b=200,a=100)   #如果在调用时，写的参数的顺序和定义的时候接受的形参的顺序不一致，可以在传递的时候指定给形参</code></pre><h1 id="函数的返回值"><a href="#函数的返回值" class="headerlink" title="函数的返回值"></a>函数的返回值</h1><p>通过“return”来吧函数的结果保存  </p><pre><code>def add3num(a,b,c):    sum = a + b + c    return sum   #此时return的作用是把后面的这个变量的结果返回，即把sum的结果返回去，也就是给别人#如果一个函数有return，那么意味着这个函数有返回值，此时就是sum的结果，如果函数没有return，意味着没有返回值。#如果一个函数有return，即有返回值，往往在调用的地方需要一个变量来接收保存这个返回值result = add3num(1,2,3)   #返回之后的结果就相当于 result = 6print(&quot;%d&quot;%sum)</code></pre>]]></content>
       
       
+      
+        <tags>
+            
+            <tag> python实例 </tag>
+            
+        </tags>
       
     </entry>
     
