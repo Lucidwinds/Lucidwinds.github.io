@@ -4,14 +4,15 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="python之随机分配">
-    <meta name="description" content="python是一门简便的编程语言，可以用简短的代码实现其他编程语言冗长的过程。  
-通过以下随机分配老师进办公室的实例可以看出来。#encoding=utf-8
+    <meta name="keywords" content="python函数参数, L.W">
+    <meta name="description" content="python函数可定义参数参数定义方式如下：
+#定义一个函数
+def add2num():
+    sun = 11 + 22
+    print(&amp;quot;sum=%d&amp;quot;%sum)
 
-import random
 
-#定义一个列表，表示三个空办公室
-office">
+#如果在定义函数的时候，在小括号中如果有">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +20,7 @@ office">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>python随机分配实例 | L.W</title>
+    <title>python函数参数 | L.W</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -309,12 +310,12 @@ office">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">python随机分配实例</h1>
+                    <h1 class="description center-align post-title">python函数参数</h1>
                 </div>
             </div>
         </div>
@@ -447,7 +448,7 @@ office">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-03-28
+                    2020-03-29
                 </div>
                 
 
@@ -464,57 +465,95 @@ office">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>python是一门简便的编程语言，可以用简短的代码实现其他编程语言冗长的过程。  </p>
-<h3 id="通过以下随机分配老师进办公室的实例可以看出来。"><a href="#通过以下随机分配老师进办公室的实例可以看出来。" class="headerlink" title="通过以下随机分配老师进办公室的实例可以看出来。"></a>通过以下随机分配老师进办公室的实例可以看出来。</h3><pre><code>#encoding=utf-8
+                <h1 id="python函数可定义参数"><a href="#python函数可定义参数" class="headerlink" title="python函数可定义参数"></a>python函数可定义参数</h1><p>参数定义方式如下：</p>
+<pre><code>#定义一个函数
+def add2num():
+    sun = 11 + 22
+    print(&quot;sum=%d&quot;%sum)
 
-import random
 
-#定义一个列表，表示三个空办公室
-offices = [[],[],[]]
+#如果在定义函数的时候，在小括号中如果有变量，那么也就意味着这个函数在调用的时候需要传递数据
+def add2num_2(num1,num2):   #在定义函数时，小括号中的变量就是形参（只是一种形式，实际的作用是用来接收传递过来的数据）
+    #sum = num1 + num2
+    #print(&quot;%d+%d=%d&quot;%(num1,num2,sum))
 
-#定义一个列表，用来存储八位老师的信息
-teachers = [&#39;张三&#39;,&#39;李四&#39;,&#39;王五&#39;,&#39;赵六&#39;,&#39;韩七&#39;,&#39;刘八&#39;,&#39;秦一&#39;,&#39;田九&#39;,&#39;孙二&#39;]
+    print(&quot;%d+%d=%d&quot;(num1,num2,num1+num2))   #如果后面用不到可直接把计算公式写出来
 
-#通过循环的方式把8位老师随机分配到3个办公室，然后把老师添加进去
-for name in teachers:
-    index = random.randint(0,2)
-    offices[index].append(name)
+#如果调用的这个函数在定义的时候有多个变量（在小括号内）那么就必须要传递数据
 
-#输出每个办公室里面老师的信息
+add2num_2(100,200)   #这里面的100，200就是实参（实际传递的参数，实际传递的数据）
+#如果定义的函数需要两个参数，而调用的时候没有给出数据，或者给出太多数据都会造成程序异常</code></pre><h5 id="通过这个例子可以简单地了解函数参数以及形参和实参的含义"><a href="#通过这个例子可以简单地了解函数参数以及形参和实参的含义" class="headerlink" title="通过这个例子可以简单地了解函数参数以及形参和实参的含义"></a>通过这个例子可以简单地了解函数参数以及形参和实参的含义</h5><p>除此之外，可以把函数运用的更加灵活一点  </p>
+<pre><code>#定义一个函数
+def add2num(a,b):   #里面的形参虽然填a,b也可以，但是为了可读性，尽量填下面用到的变量名sum1,sum2
+    sum = a + b
+    print(&quot;sum=%d&quot;%sum)
 
-i = 1
+#1.从用户获取两个数据
 
-for room in offices:
-    print(&#39;办公室%d-----&#39;%i)
-    for teacherName in room:
-            print(teacherName)
-    i += 1</code></pre><h3 id="运行了两次，实现的效果如下"><a href="#运行了两次，实现的效果如下" class="headerlink" title="运行了两次，实现的效果如下"></a>运行了两次，实现的效果如下</h3><pre><code>lucid@lucid:~$ python 000.py
-办公室1-----
-李四
-赵六
-田九
-办公室2-----
-张三
-刘八
-孙二
-办公室3-----
-王五
-韩七
-秦一
-lucid@lucid:~$ python 000.py
-办公室1-----
-张三
-赵六
-孙二
-办公室2-----
-李四
-王五
-韩七
-刘八
-办公室3-----
-秦一
-田九</code></pre><p>可见，实现了随机安排的效果。  </p>
-<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a><strong>总结</strong></h4><p>编程思想还是和日常的思维方式有区别的，以正常的思维刚开始，没想到直接取出老师安排进随机的办公室里面，我想着就按照日常的想法随机安排办公室随机安排教师，这么想了之后我发现实施下来很难，而以这种方式就可以很方便的实现简单的随机，以后再加限制条件就相对简单了。所以，编程思想还是要好好培养的。</p>
+num1 = int(input(&quot;请输入第一个数字：&quot;))
+num2 = int(input(&quot;请输入第二个数字：&quot;))   #因为获取的数据是字符串，无法直接完成数学运算，可直接在这里定义int类型
+
+#2.调用函数，并且传递过去，就能完成函数的运行
+
+add2num(num1,num2)</code></pre><p>在定义形参和实参的时候，一般是按照先后顺序一一对应的，但是可以通过括号内加“=”来完成乱序赋值  </p>
+<pre><code>def add2num(a,b):
+    sum = a+b
+    print(&quot;%d+%d=%d&quot;%(a,b,sum))
+
+add2num(b=200,a=100)   #如果在调用时，写的参数的顺序和定义的时候接受的形参的顺序不一致，可以在传递的时候指定给形参</code></pre><h1 id="函数的返回值"><a href="#函数的返回值" class="headerlink" title="函数的返回值"></a>函数的返回值</h1><p>通过“return”来吧函数的结果保存  </p>
+<pre><code>def add3num(a,b,c):
+    sum = a + b + c
+    return sum   #此时return的作用是把后面的这个变量的结果返回，即把sum的结果返回去，也就是给别人
+
+#如果一个函数有return，那么意味着这个函数有返回值，此时就是sum的结果，如果函数没有return，意味着没有返回值。
+#如果一个函数有return，即有返回值，往往在调用的地方需要一个变量来接收保存这个返回值
+result = add3num(1,2,3)   #返回之后的结果就相当于 result = 6
+print(&quot;%d&quot;%sum)</code></pre><h1 id="自定义函数传参数"><a href="#自定义函数传参数" class="headerlink" title="自定义函数传参数"></a>自定义函数传参数</h1><pre><code>def test(numsTemp):   #需要向函数传参数的话，函数这里必须要有一个接收的变量一般xxxTemp
+
+    numsTemp.append(44)
+
+nums = [11,22,33]
+
+test(nums)   #这里调用这个函数，如果要向里面传参数，就要把要传的参数写进去，相应的定义函数的地方就要有接收的变量</code></pre><h1 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h1><p>在python中，值是靠引⽤来传递来的。  </p>
+<p>我们可以用id()来判断两个变量是否为同一个值的引用。我们可以将id值理解为那块内存的地址标示。  </p>
+<h4 id="分为可变类型和不可变类型"><a href="#分为可变类型和不可变类型" class="headerlink" title="分为可变类型和不可变类型"></a>分为可变类型和不可变类型</h4><p>可变类型，值可以改变：<br>列表 list<br>字典 dict  </p>
+<p>不可变类型，值不可以改变：<br>数值类型 int,long,bool,float<br>字符串 str<br>元组 tuple  </p>
+<h2 id="会出现以下情况"><a href="#会出现以下情况" class="headerlink" title="会出现以下情况"></a>会出现以下情况</h2><pre><code>def test1(numsTemp):
+    print(id(numsTemp))
+    numsTemp.append(44)
+    print(id(numsTemp))
+
+def test2(aTemp):
+    print(id(aTemp))
+    aTemp += 1
+    print(id(aTemp))
+
+nums = [11,22,33]
+test1(nums)
+print(&quot;-&quot;*20)
+print(id(nums))
+print(nums)
+
+print(&quot;*&quot;*30)
+
+a = 100
+test2(a)
+print(&quot;-&quot;*20)
+print(id(a))
+print(a)</code></pre><p>输出结果如下：  </p>
+<pre><code>1326828693760
+1326828693760
+--------------------
+1326828693760
+[11, 22, 33, 44]
+******************************
+140733936296704
+140733936296736
+--------------------
+140733936296704
+100</code></pre><p>可以看出上面的nums是列表属于可变类型，而a属于不可变类型，从而产生区别。  </p>
+<p>可变类型在进行数值更改时，相当于地址不变，在原地址直接进行修改，而不可变类型进行数值修改时，相当于在不同地址贴标签，当数值发生改变时，原地址的数值不发生改变，而在其他地址找到符合的数值把“标签”贴上去。  </p>
+<p><strong>如果全局变量是可变类型：即列表或者字典，那么就可以在函数中直接进行修改；而不可变类型，比如int，是不能直接在函数中修改的，需要加global声明。</strong></p>
 
             </div>
             <hr/>
@@ -540,7 +579,7 @@ lucid@lucid:~$ python 000.py
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://lucidwinds.github.io/2020/03/28/python-sui-ji-fen-pei-shi-li/">http://lucidwinds.github.io/2020/03/28/python-sui-ji-fen-pei-shi-li/</a>
+                    <a href="http://lucidwinds.github.io/2020/03/29/python-han-shu-can-shu/">http://lucidwinds.github.io/2020/03/29/python-han-shu-can-shu/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -749,31 +788,29 @@ lucid@lucid:~$ python 000.py
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/03/29/python-han-shu-can-shu/">
+                <a href="/2020/04/05/python-ju-bu-bian-liang-he-quan-ju-bian-liang/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="python函数参数">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="python局部变量和全局变量">
                         
-                        <span class="card-title">python函数参数</span>
+                        <span class="card-title">python局部变量和全局变量</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            python函数可定义参数参数定义方式如下：
-#定义一个函数
-def add2num():
-    sun = 11 + 22
-    print(&quot;sum=%d&quot;%sum)
+                            python中变量包括局部变量和全局变量局部变量在函数里面定义的变量，就叫做局部变量。它只能在定义它的函数中有效，出了这个函数它就没有了作用，形参也是局部变量。  
+#encoding=utf-8
 
+import time
 
-#如果在定义函数的时候，在小括号中如果有
+def tes
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-29
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-05
                         </span>
                         <span class="publish-author">
                             
@@ -801,24 +838,30 @@ def add2num():
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/03/25/hello-github/">
+                <a href="/2020/03/28/python-sui-ji-fen-pei-shi-li/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="Hello Github">
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="python随机分配实例">
                         
-                        <span class="card-title">Hello Github</span>
+                        <span class="card-title">python随机分配实例</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            GitHub是通过Git进行版本控制的软件源代码托管服务平台，由GitHub公司（曾称Logical Awesome）的开发者Chris Wanstrath、PJ Hyett和Tom Preston-Werner使用Ruby on Rail
+                            python是一门简便的编程语言，可以用简短的代码实现其他编程语言冗长的过程。  
+通过以下随机分配老师进办公室的实例可以看出来。#encoding=utf-8
+
+import random
+
+#定义一个列表，表示三个空办公室
+office
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-25
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-28
                             </span>
                         <span class="publish-author">
                             
@@ -831,8 +874,8 @@ def add2num():
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Github/">
-                        <span class="chip bg-color">Github</span>
+                    <a href="/tags/python%E5%AE%9E%E4%BE%8B/">
+                        <span class="chip bg-color">python实例</span>
                     </a>
                     
                 </div>

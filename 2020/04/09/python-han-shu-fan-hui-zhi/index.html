@@ -4,15 +4,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="python函数参数, L.W">
-    <meta name="description" content="python函数可定义参数参数定义方式如下：
-#定义一个函数
-def add2num():
-    sun = 11 + 22
-    print(&amp;quot;sum=%d&amp;quot;%sum)
-
-
-#如果在定义函数的时候，在小括号中如果有">
+    <meta name="keywords" content="python函数返回值, L.W">
+    <meta name="description" content="函数返回值一个函数的函数名既是该函数的代表，也是一个变量。由于函数名变量通常用来把函数的处理结果数据返回给调用函数，即递归调用，所以一般把函数名变量称为返回值，函数的返回值类型是在定义函数时指定的。  
+函数可以有返回值，也可以没有返回值。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -20,7 +14,7 @@ def add2num():
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>python函数参数 | L.W</title>
+    <title>python函数返回值 | L.W</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +304,12 @@ def add2num():
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">python函数参数</h1>
+                    <h1 class="description center-align post-title">python函数返回值</h1>
                 </div>
             </div>
         </div>
@@ -448,7 +442,7 @@ def add2num():
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-03-29
+                    2020-04-09
                 </div>
                 
 
@@ -465,50 +459,116 @@ def add2num():
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="python函数可定义参数"><a href="#python函数可定义参数" class="headerlink" title="python函数可定义参数"></a>python函数可定义参数</h1><p>参数定义方式如下：</p>
-<pre><code>#定义一个函数
-def add2num():
-    sun = 11 + 22
-    print(&quot;sum=%d&quot;%sum)
+                <h1 id="函数返回值"><a href="#函数返回值" class="headerlink" title="函数返回值"></a><a href="https://baike.baidu.com/item/%E8%BF%94%E5%9B%9E%E5%80%BC/9629649?fr=aladdin" target="_blank" rel="noopener">函数返回值</a></h1><p>一个函数的函数名既是该函数的代表，也是一个变量。由于函数名变量通常用来把函数的处理结果数据返回给调用函数，即递归调用，所以一般把函数名变量称为返回值，函数的返回值类型是在定义函数时指定的。  </p>
+<p><strong>函数可以有返回值，也可以没有返回值。</strong>  </p>
+<p>函数的返回值是通过 <strong>return</strong> 实现的。  </p>
+<pre><code>def test():
+    a = 100
+    return a   
+    #通过return把函数里面a的值返回给函数，从而可以在下面进行对其他变量的赋值
 
+num = test()
+print(num)</code></pre><p>一个函数可以有多个返回值。  </p>
+<p>函数获取多个返回值有下面四种方式：  </p>
+<h4 id="1-直接获取："><a href="#1-直接获取：" class="headerlink" title="1. 直接获取："></a>1. 直接获取：</h4><pre><code>def test():
+    name = input(&quot;请输入姓名&quot;)
+    myId = input(&quot;请输入学号&quot;)
+    age = input(&quot;请输入年龄&quot;)
 
-#如果在定义函数的时候，在小括号中如果有变量，那么也就意味着这个函数在调用的时候需要传递数据
-def add2num_2(num1,num2):   #在定义函数时，小括号中的变量就是形参（只是一种形式，实际的作用是用来接收传递过来的数据）
-    #sum = num1 + num2
-    #print(&quot;%d+%d=%d&quot;%(num1,num2,sum))
+    return name,myId,age
 
-    print(&quot;%d+%d=%d&quot;(num1,num2,num1+num2))   #如果后面用不到可直接把计算公式写出来
+recvData = test()
+print(recvData)</code></pre><p><strong>获取结果：</strong>  </p>
+<pre><code>F:\代码&gt;python3 ceshi.py
+请输入姓名xiaoming
+请输入学号100
+请输入年龄15
+(&#39;xiaoming&#39;, &#39;100&#39;, &#39;15&#39;)</code></pre><p>可见这种方式获取的结果直接是一个元组。  </p>
+<h4 id="2-定义元组获取："><a href="#2-定义元组获取：" class="headerlink" title="2. 定义元组获取："></a>2. 定义元组获取：</h4><pre><code>def test():
+    name = input(&quot;请输入姓名&quot;)
+    myId = input(&quot;请输入学号&quot;)
+    age = input(&quot;请输入年龄&quot;)
 
-#如果调用的这个函数在定义的时候有多个变量（在小括号内）那么就必须要传递数据
+    info = (name,myId,age)
+    return info
 
-add2num_2(100,200)   #这里面的100，200就是实参（实际传递的参数，实际传递的数据）
-#如果定义的函数需要两个参数，而调用的时候没有给出数据，或者给出太多数据都会造成程序异常</code></pre><h5 id="通过这个例子可以简单地了解函数参数以及形参和实参的含义"><a href="#通过这个例子可以简单地了解函数参数以及形参和实参的含义" class="headerlink" title="通过这个例子可以简单地了解函数参数以及形参和实参的含义"></a>通过这个例子可以简单地了解函数参数以及形参和实参的含义</h5><p>除此之外，可以把函数运用的更加灵活一点  </p>
-<pre><code>#定义一个函数
-def add2num(a,b):   #里面的形参虽然填a,b也可以，但是为了可读性，尽量填下面用到的变量名sum1,sum2
-    sum = a + b
-    print(&quot;sum=%d&quot;%sum)
+recvData = test()
+print(recvData)</code></pre><p><strong>获取结果：</strong>  </p>
+<pre><code>F:\代码&gt;python3 ceshi.py
+请输入姓名xiaoming
+请输入学号100
+请输入年龄15
+(&#39;xiaoming&#39;, &#39;100&#39;, &#39;15&#39;)</code></pre><p>可见和直接获取结果是一样的，得到一个元组。</p>
+<h4 id="3-定义列表获取："><a href="#3-定义列表获取：" class="headerlink" title="3. 定义列表获取："></a>3. 定义列表获取：</h4><pre><code>def test():
+    name = input(&quot;请输入姓名&quot;)
+    myId = input(&quot;请输入学号&quot;)
+    age = input(&quot;请输入年龄&quot;)
 
-#1.从用户获取两个数据
+    info = [name,myId,age]
+    return info
 
-num1 = int(input(&quot;请输入第一个数字：&quot;))
-num2 = int(input(&quot;请输入第二个数字：&quot;))   #因为获取的数据是字符串，无法直接完成数学运算，可直接在这里定义int类型
+recvData = test()
+print(recvData)</code></pre><p><strong>获取结果：</strong>  </p>
+<pre><code>F:\代码&gt;python3 ceshi.py
+请输入姓名xiaoming
+请输入学号100
+请输入年龄15
+[&#39;xiaoming&#39;, &#39;100&#39;, &#39;15&#39;]</code></pre><p>这种方式结果获得的是一个列表。</p>
+<h4 id="4-定义字典获取："><a href="#4-定义字典获取：" class="headerlink" title="4. 定义字典获取："></a>4. 定义字典获取：</h4><pre><code>def test():
+    name = input(&quot;请输入姓名&quot;)
+    myId = input(&quot;请输入学号&quot;)
+    age = input(&quot;请输入年龄&quot;)
 
-#2.调用函数，并且传递过去，就能完成函数的运行
+    info = {&quot;name&quot;:name,&quot;id&quot;:myId,&quot;age&quot;:age}
+    return info
 
-add2num(num1,num2)</code></pre><p>在定义形参和实参的时候，一般是按照先后顺序一一对应的，但是可以通过括号内加“=”来完成乱序赋值  </p>
-<pre><code>def add2num(a,b):
-    sum = a+b
-    print(&quot;%d+%d=%d&quot;%(a,b,sum))
+recvData = test()
+print(recvData)</code></pre><p><strong>获取结果：</strong>  </p>
+<pre><code>F:\代码&gt;python3 ceshi.py
+请输入姓名xiaoming
+请输入学号100
+请输入年龄15
+{&#39;name&#39;: &#39;xiaoming&#39;, &#39;id&#39;: &#39;100&#39;, &#39;age&#39;: &#39;15&#39;}</code></pre><p>这种方式获取的结果最一目了然，但是在写的过程中也是最麻烦。 </p>
+<h3 id="在函数外面获取的方式："><a href="#在函数外面获取的方式：" class="headerlink" title="在函数外面获取的方式："></a>在函数外面获取的方式：</h3><p>可以直接获取（元组，列表）：  </p>
+<pre><code>def test():
+    name = input(&quot;请输入姓名&quot;)
+    myId = input(&quot;请输入学号&quot;)
+    age = input(&quot;请输入年龄&quot;)
 
-add2num(b=200,a=100)   #如果在调用时，写的参数的顺序和定义的时候接受的形参的顺序不一致，可以在传递的时候指定给形参</code></pre><h1 id="函数的返回值"><a href="#函数的返回值" class="headerlink" title="函数的返回值"></a>函数的返回值</h1><p>通过“return”来吧函数的结果保存  </p>
-<pre><code>def add3num(a,b,c):
-    sum = a + b + c
-    return sum   #此时return的作用是把后面的这个变量的结果返回，即把sum的结果返回去，也就是给别人
+    return name,myId,age
 
-#如果一个函数有return，那么意味着这个函数有返回值，此时就是sum的结果，如果函数没有return，意味着没有返回值。
-#如果一个函数有return，即有返回值，往往在调用的地方需要一个变量来接收保存这个返回值
-result = add3num(1,2,3)   #返回之后的结果就相当于 result = 6
-print(&quot;%d&quot;%sum)</code></pre>
+a,b,c = test()
+print(a)
+print(b)
+print(c)</code></pre><p>结果：  </p>
+<pre><code>F:\代码&gt;python3 ceshi.py
+请输入姓名xiaoming
+请输入学号100
+请输入年龄15
+xiaoming
+100
+15</code></pre><p>通过函数调用：  </p>
+<pre><code>def test():
+    name = input(&quot;请输入姓名&quot;)
+    myId = input(&quot;请输入学号&quot;)
+    age = input(&quot;请输入年龄&quot;)
+
+    info = {&quot;name&quot;:name,&quot;id&quot;:myId,&quot;age&quot;:age}
+    return info
+
+temp = test()
+print(temp.get(&quot;name&quot;))
+print(temp.get(&quot;id&quot;))
+print(temp.get(&quot;age&quot;))</code></pre><p>结果：  </p>
+<pre><code>F:\代码&gt;python3 ceshi.py
+请输入姓名xiaoming
+请输入学号100
+请输入年龄15
+xiaoming
+100
+15</code></pre><p>这种方式可以随便获取，不用按照一定的顺序。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><h2 id=""><a href="#" class="headerlink" title=""></a></h2><h1 id="-1"><a href="#-1" class="headerlink" title=""></a></h1><p>这四种方式第一种最简单，的确是优点，但是对于写的程序而言，其中的关联性越弱，到后期维护修改难度越小，而第四种方式的字典可以根据key值来获取value值，是关联性最小的一种方式，非常推荐用。</p>
+
             </div>
             <hr/>
 
@@ -533,7 +593,7 @@ print(&quot;%d&quot;%sum)</code></pre>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://lucidwinds.github.io/2020/03/29/python-xue-xi/">http://lucidwinds.github.io/2020/03/29/python-xue-xi/</a>
+                    <a href="http://lucidwinds.github.io/2020/04/09/python-han-shu-fan-hui-zhi/">http://lucidwinds.github.io/2020/04/09/python-han-shu-fan-hui-zhi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -743,31 +803,25 @@ print(&quot;%d&quot;%sum)</code></pre>
                 <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/2020/03/29/python-xue-xi/">
+                <a href="/2020/04/09/python-han-shu-fan-hui-zhi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="python函数参数">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="python函数返回值">
                         
-                        <span class="card-title">python函数参数</span>
+                        <span class="card-title">python函数返回值</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            python函数可定义参数参数定义方式如下：
-#定义一个函数
-def add2num():
-    sun = 11 + 22
-    print(&quot;sum=%d&quot;%sum)
-
-
-#如果在定义函数的时候，在小括号中如果有
+                            函数返回值一个函数的函数名既是该函数的代表，也是一个变量。由于函数名变量通常用来把函数的处理结果数据返回给调用函数，即递归调用，所以一般把函数名变量称为返回值，函数的返回值类型是在定义函数时指定的。  
+函数可以有返回值，也可以没有返回值。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-29
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-09
                             </span>
                         <span class="publish-author">
                             
@@ -796,30 +850,29 @@ def add2num():
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/03/28/python-sui-ji-fen-pei-shi-li/">
+                <a href="/2020/04/05/python-ju-bu-bian-liang-he-quan-ju-bian-liang/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="python随机分配实例">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="python局部变量和全局变量">
                         
-                        <span class="card-title">python随机分配实例</span>
+                        <span class="card-title">python局部变量和全局变量</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            python是一门简便的编程语言，可以用简短的代码实现其他编程语言冗长的过程。  
-通过以下随机分配老师进办公室的实例可以看出来。#encoding=utf-8
+                            python中变量包括局部变量和全局变量局部变量在函数里面定义的变量，就叫做局部变量。它只能在定义它的函数中有效，出了这个函数它就没有了作用，形参也是局部变量。  
+#encoding=utf-8
 
-import random
+import time
 
-#定义一个列表，表示三个空办公室
-office
+def tes
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-28
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-05
                             </span>
                         <span class="publish-author">
                             
